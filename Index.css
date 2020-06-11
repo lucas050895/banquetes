@@ -1,0 +1,157 @@
+/*HEADER*/
+header {
+  width: 100%;
+  height: 650px;
+  grid-area: header;
+  background: #ef32d9; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #89fffd,
+    rgb(239, 50, 217, 00.3)
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #89fffd, rgb(239, 50, 217, 00.3)),
+    url(../Imagenes/Fondo.jpg) no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+
+/*TITULO*/
+h1 {
+  color: #fff;
+  font-size: 80px;
+  text-align: center;
+  margin: 140px 0;
+  font-family: "Courgette", cursive;
+  -webkit-text-stroke: 0.2px black;
+}
+
+/*CUERPO*/
+/*SECTION SOMOS*/
+
+.logo{
+  grid-area: imagen;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logo img{
+  border-radius: 200px;
+}
+.texto {
+  grid-area: texto;
+  margin: 5%;
+  text-align: center;
+  font-size: 20px;
+}
+
+/*CONTENIDO DE GALERIA*/
+.contenedor-galeria {
+  width: 100%;
+  height: 480px;
+  grid-area: galeria;
+  margin-top: 10%;
+  text-align: center;
+  background: rgba(183,222,237,0.29);
+  background: -moz-linear-gradient(top, rgba(183,222,237,0.29) 0%, rgba(183,222,237,0.33) 6%, rgba(183,222,237,0.6) 43%, rgba(183,222,237,0.65) 50%, rgba(183,222,237,0.91) 87%, rgba(183,222,237,1) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(183,222,237,0.29)), color-stop(6%, rgba(183,222,237,0.33)), color-stop(43%, rgba(183,222,237,0.6)), color-stop(50%, rgba(183,222,237,0.65)), color-stop(87%, rgba(183,222,237,0.91)), color-stop(100%, rgba(183,222,237,1)));
+  background: -webkit-linear-gradient(top, rgba(183,222,237,0.29) 0%, rgba(183,222,237,0.33) 6%, rgba(183,222,237,0.6) 43%, rgba(183,222,237,0.65) 50%, rgba(183,222,237,0.91) 87%, rgba(183,222,237,1) 100%);
+  background: -o-linear-gradient(top, rgba(183,222,237,0.29) 0%, rgba(183,222,237,0.33) 6%, rgba(183,222,237,0.6) 43%, rgba(183,222,237,0.65) 50%, rgba(183,222,237,0.91) 87%, rgba(183,222,237,1) 100%);
+  background: -ms-linear-gradient(top, rgba(183,222,237,0.29) 0%, rgba(183,222,237,0.33) 6%, rgba(183,222,237,0.6) 43%, rgba(183,222,237,0.65) 50%, rgba(183,222,237,0.91) 87%, rgba(183,222,237,1) 100%);
+  background: linear-gradient(to bottom, rgba(183,222,237,0.29) 0%, rgba(183,222,237,0.33) 6%, rgba(183,222,237,0.6) 43%, rgba(183,222,237,0.65) 50%, rgba(183,222,237,0.91) 87%, rgba(183,222,237,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b7deed', endColorstr='#b7deed', GradientType=0 );
+}
+.contenedor-galeria img{
+  box-shadow: 0 8px 10px -4px rgba(0, 0, 0, 0.6);
+  border-radius: 15px;
+  cursor: pointer;
+}
+.contenedor-galeria h2 {
+  text-align: center;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 50px;
+  padding: 30px;
+}
+.onda{
+  width: 100%;
+  grid-area: onda;
+}
+
+/*SERVICIOS*/
+.contenedor-servicio {
+  width: 100%;
+  height: 650px;
+  grid-area: servicio;
+  margin-top: -12%;
+}
+.contenedor-servicio h2 {
+  text-align: center;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 50px;
+  padding: 30px;
+}
+.servicio {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.contacto,
+.domicilio,
+.comida {
+  width: 300px;
+  height: 400px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+.contacto img,
+.domicilio img,
+.comida img {
+  margin-top: 10%;
+  width: 50%;
+  height: 150px;
+}
+.contacto .contenido,
+.domicilio .contenido,
+.comida .contenido {
+  height: 150px;
+  margin-top: 20%;
+}
+
+/*ADAPTACION A DISPOSITIVOS*/
+@media screen and (max-width: 360px){
+  .somos{
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 600px){
+  .header,
+  .imagen,
+  .texto,
+  .galeria,
+  .servicio,
+  .pie{
+    width: 600px;
+  }
+  .contenedor-general{
+    display:grid;
+    grid-template-columns: 600px;
+    grid-template-areas:  "header"
+                          "imagen"
+                          "texto"
+                          "galeria"
+                          "servicio"
+                          "pie";
+
+  }
+}
+
+@media screen and (max-width: 990px){
+  .contenedor-galeria{
+    margin-bottom: 10%;
+  }
+  .onda{
+    display: none;
+  }
+}
